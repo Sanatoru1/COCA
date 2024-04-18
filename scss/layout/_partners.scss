@@ -1,0 +1,31 @@
+@import "../scss-utilts/variable";
+@import "../scss-utilts/mixins";
+
+.partners{
+    .partners__content{
+        // padding:  6.4rem 16.5rem;
+        // padding:  6.4rem 10.5rem;
+        padding:  6.4rem;
+        gap: 3rem;
+        @include flex-row;
+        .partners__txt{
+            max-width: 30rem;
+            width: 100%;
+            h3{
+                @include secTitleStyle;
+                color: $clr-neutral-100;
+            }
+            p{
+                @include secSsmallTxtStyle; line-height: 32px;
+                color: $clr-neutral-60;
+            }
+        }
+        .partners__logos{
+            div{
+                width: 60rem;
+                height:9rem;
+                @include flex-row;
+            }
+        }
+        }
+    }

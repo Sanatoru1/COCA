@@ -1,0 +1,48 @@
+// @import "../scss-utilts/variable";
+// @import "../scss-utilts/mixins";
+
+.features {
+	padding: 16rem 0 9.4rem 0;
+	.features__content {
+		@include flex-row;
+		flex-wrap: wrap;
+		gap: 58px;
+		.features__left {
+			background-image: url("../../img/bg/Features-image.png");
+			background-size: contain;
+			background-repeat: no-repeat;
+			width: 585px;
+			height: 651px;
+			img{
+				margin: 31.3rem 3.6rem 4rem 25.9rem;
+			}
+		}
+		.features__right {
+			width: 557px;
+			h2 {
+				@include secTitleStyle;
+			}
+			p {
+				margin: $margin-ssmall 0 $margin-regular 0;
+				@include secSsmallTxtStyle;
+				max-width: 36rem;
+				color: $clr-neutral-60;
+				line-height: 32px;
+			}
+			.features-list {
+				.features-item {
+					background: url("../../img/icons/Features Check-circle.svg") no-repeat
+						0 50%; /* Параметры фона */
+					padding-left: $padding-regular;
+					margin: $margin-xxsmall 0;
+					max-width: 35rem;
+					a {
+						color: $clr-neutral-100;
+						@include secSsmallTxtStyle;
+						line-height: 32px;
+					}
+				}
+			}
+		}
+	}
+}

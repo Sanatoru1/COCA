@@ -1,0 +1,51 @@
+@import "../scss-utilts/variable";
+@import "../scss-utilts/mixins";
+
+.hero {
+	padding-bottom: 13.5rem;
+	.hero__content {
+		.hero__left {
+			h1 {
+				@include titleStyle;
+				max-width: 60rem;
+			}
+			.hero-left__bottom {
+				margin-top: 5rem;
+				.hero_txt {
+					display: flex;
+					.underline {
+						@include hyphenStyle;
+					}
+					p {
+						@include secSubtitleStyle;
+						max-width: 50rem;
+						margin-bottom: 7.8rem;
+					}
+				}
+				form {
+					gap: 1.6rem;
+					@include flex-row-center;
+					input {
+						width: 28rem;
+						border-bottom: $clr-neutral-40 0.1rem solid;
+						color: $clr-neutral-100;
+						font-size: $font-size-ss;
+						line-height: 2.4rem;
+						padding-bottom: 2.3rem;
+						&::placeholder {
+							color: $clr-neutral-60;
+							font-size: $font-size-ss;
+							line-height: 2.4rem;
+						}
+					}
+					a {
+						@include btnStyle(dark);
+						@include btnHvrStyle(dark);
+						gap: 0.8rem;
+					}
+				}
+			}
+		}
+		// .hero__right{}
+	}
+}

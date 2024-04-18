@@ -1,0 +1,95 @@
+@import "../scss-utilts/variable";
+@import "../scss-utilts/mixins";
+
+.reviews {
+	.reviews__content {
+		.reviews__top {
+			@include flex-row;
+			margin-bottom: 4.8rem;
+			width: 100%; //?
+			h2 {
+				max-width: 50rem;
+				@include secTitleStyle;
+			}
+			p {
+				max-width: 36.5rem;
+				@include subParagrafStyle;
+			}
+		}
+		.reviews__bottom {
+			@include flex-column;
+			.review-block {
+				margin-left: 17rem;
+				position: relative;
+				&::before {
+					position: absolute;
+					content: "";
+					background-image: url("../../img/icons/“__.svg");
+					background-size: cover;
+					background-repeat: no-repeat;
+					width: 115px;
+					height: 77px;
+					bottom: 251px;
+					left: -18rem;
+				}
+				.stars-list {
+					margin-bottom: 1.6rem;
+					gap: 4rem;
+					span {
+						@include sec2SsmallTxtStyle;
+					}
+				}
+				h3 {
+					max-width: 898px;
+					@include H3MediumTxtStyle;
+				}
+				.review-block_info {
+					@include flex-row;
+					.user {
+						@include flex-row;
+						gap: 2.4rem;
+						// .user-avatar{}
+						.user-info {
+							h3 {
+								@include secSsmallTxtStyle;
+								color: $clr-neutral-100;
+							}
+							p,
+							span {
+								@include sec2SsmallTxtStyle;
+								color: $clr-neutral-60;
+								line-height: 27px;
+							}
+						}
+					}
+					.btn-holder {
+						gap: 1.6rem;
+						a {
+							border-radius: $radius-large;
+							// padding: $padding-2xsmall;
+							// border-radius: 100%;
+							padding: 1.6rem;
+							font-size: $font-size-ss;
+							font-weight: 700; // bold
+							line-height: 2.4rem;
+							border-radius: $radius-large;
+							border: $clr-neutral-100 solid 0.1rem;
+							&:first-child {
+								// @include btnStyle(light);
+								@include btnHvrStyle(light);
+								background-color: $clr-neutral-10;
+								color: $clr-neutral-100;
+							}
+							&:last-child {
+								// @include btnStyle(dark);
+								background-color: $clr-neutral-100;
+								color: $clr-neutral-10;
+								@include btnHvrStyle(dark);
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

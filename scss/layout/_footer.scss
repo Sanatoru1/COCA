@@ -1,0 +1,91 @@
+@import "../scss-utilts/variable";
+@import "../scss-utilts/mixins";
+
+.footer {
+	@include ThemeStyle("light");
+	h3,a,p,span,h2 &:hover {
+		@include txtHvrStyle("darkTxt");
+		transition: $transition-fast;
+		@include click;
+	}
+	.footer__content {
+		.footer__top {
+			margin: 11.2rem 0;
+			@include flex-row;
+			.footer-top__left {
+				max-width: 72rem;
+				width: 100%;
+				h2 {
+					@include secTitleStyle;
+				}
+				.footer-top_txt{
+					display: flex;
+					.underline{@include hyphenStyle;}
+					p {
+						max-width: 543px;
+						width: 100%;
+						font-size: $font-size-l;
+						font-weight: 600;
+						line-height: 34px;
+					}
+				}
+			}
+			.footer-top__right{
+				a{@include btnStyle(dark); @include btnHvrStyle(dark);}
+			}
+		}
+		.footer__midle {
+			padding: 7rem 0;
+			border-bottom: 1px solid $clr-neutral-40;
+			@include flex-row;
+			.footer__info {
+				width: 292px;
+				// height: 148px;
+				p {
+					@include sec2SsmallTxtStyle;
+				}
+				a {
+					@include CodeCultLogoStyle(dark);
+				}
+			}
+			.footer__navigation {
+				width: 764px;
+				height: 192px;
+				@include flex-row;
+				ul {
+					// &:first-child{
+					// 	margin-bottom: $margin-ssmall;
+					// 	background-color:  red;
+					// }
+					h3,
+					a {
+						font-size: $font-size-ss;
+						font-weight: 700;
+						line-height: 24px;
+						&:hover {
+							@include txtHvrStyle("darkTxt");
+							transition: $transition-fast;
+							@include click;
+						}
+					}
+					li {
+						margin: $margin-xxxsmall 0;
+						a {
+							font-weight: 400;
+						}
+					}
+				}
+			}
+		}
+		.footer__bottom {
+			text-align: center;
+			padding: $padding-3xsmall 0;
+			a,
+			span {
+				font-size: $font-size-ss;
+				color: $clr-neutral-50;
+				line-height: 24px;
+			}
+		}
+	}
+}

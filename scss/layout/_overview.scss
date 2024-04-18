@@ -1,0 +1,51 @@
+@import "../scss-utilts/variable";
+@import "../scss-utilts/mixins";
+
+.overview {
+	background-color: $clr-neutral-100;
+	.overview__content {
+		padding: $padding-large 0;
+		h2 {
+			color: $clr-neutral-10;
+			@include secTitleStyle;
+		}
+		p {
+			@include subParagrafStyle;
+		}
+		.cards-holder {
+			margin-top: $margin-xxmedium;
+            // gap: 259px;
+            @include flex-row;
+            flex-wrap: wrap;
+			.overview-card {
+				width: 453px;
+				// height: 25rem;
+                border-radius: $radius-xsmall;
+                padding: 1rem 0;
+				h3,img {
+					@include secSubtitleStyle;
+					color: $clr-neutral-10;
+					margin-bottom: 2.4rem;
+                    max-width: 26.5rem;
+				}
+				p {
+					@include sec2SsmallTxtStyle;
+				}
+                &:hover{
+                    transition: $transition-medium;
+                    background-color: lighten($clr-neutral-100, 100%);
+                    h3,p{
+                        color: darken($clr-neutral-10, 90%);
+                    }
+                }
+			}
+			p{
+				&:last-child{
+					&:hover{
+						display: flex;
+					}
+				}
+			}
+		}
+	}
+}

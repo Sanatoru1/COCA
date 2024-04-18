@@ -1,0 +1,141 @@
+@import "./mixins";
+$clr-black: #000;
+$clr-pastel_orange:#FA7515;
+$clr-pale_blue:#E2F8F0B2;
+// Brand Pallete
+
+// PRIMARY COLOR // BLUE
+$clr-secondary_main-iris: #2e8dff;
+$clr-secondary_surface-iris: #f5f5ff;
+$clr-secondary_border-iris: #dfe0f3;
+$clr-secondary_hover-iris: #1463ff;
+$clr-secondary_pressed-iris: #085885;
+$clr-secondary_focus-iris: #dbdbf8;
+
+// SECONDARY COLOR // YELLOW
+$clr-secondary_main-yellow: #ffd33c;
+$clr-secondary_surface-yellow: #fff6d8;
+$clr-secondary_border-yellow: #fff0be;
+$clr-secondary_hover-yellow: #d5b032;
+$clr-secondary_pressed-yellow: #806a1e;
+
+// SUCCES COLOR // GREEN
+$clr-succes_main-green: #50cd89;
+$clr-succes_surface-green: #f2fff8;
+$clr-succes_border-green: #c5eed8;
+$clr-succes_hover-green: #46b277;
+$clr-succes_pressed-green: #28593f;
+$clr-succes_focus-green: #dcf5e7;
+
+// ERROR COLOR // RED
+$clr-error_main-red: #f14141;
+$clr-error_surface-red: #fff2f2;
+$clr-error_border-red: #fac0c0;
+$clr-error_hover-red: #d93a3a;
+$clr-error_pressed-red: #802a2a;
+// $clr-error_focus-red: #F1414133;
+$clr-error_focus-red: #fcd9d9;
+
+// INFO COLOR // VIOLET
+$clr-info_main-blue: #7239ea;
+$clr-info_surface-blue: #f6f2ff;
+$clr-info_border-blue: #d0bdf8;
+$clr-info_hover-blue: #6633d1;
+$clr-info_pressed-blue: #3f2478;
+$clr-info_focus-blue: #e3d7fb;
+
+// NEUTRAL COLORS
+$clr-neutral-10: #ffffff;
+$clr-neutral-20: #f5f5f5;
+$clr-neutral-30: #ededed;
+$clr-neutral-40: #d6d6d6;
+$clr-neutral-50: #c2c2c2;
+$clr-neutral-60: #878787;
+$clr-neutral-70: #606060;
+$clr-neutral-80: #383838;
+$clr-neutral-90: #161a34;
+$clr-neutral-100: #1d1e25;
+
+// FONT FAMILYS
+$primary-font: "Inter", sans-serif;
+
+$font-size-4xl: 8rem;
+$font-size-3xl: 7.2rem;
+$font-size-2xl: 6.4rem;
+$font-size-xl: 5.6rem;
+$font-size-x: 4rem;
+$font-size-lx: 3.2rem;
+$font-size-l: 2.4rem;
+$font-size-m: 2rem;
+$font-size-s: 1.8rem;
+$font-size-ss: 1.6rem;
+$font-size-3s: 1.4rem;
+$font-size-4s: 1.2rem;
+
+$margin-xxxsmall: 1.6rem;
+$margin-xxsmall: 1rem;
+$margin-xsmall: 2rem;
+$margin-ssmall: 2.4rem;
+$margin-small: 3rem;
+$margin-regular: 4rem;
+$margin-medium: 5rem;
+$margin-xmedium: 6rem;
+$margin-xxmedium: 8rem;
+$margin-large: 10rem;
+
+$padding-3xsmall: 1rem;
+$padding-2xsmall: 1.6rem;
+$padding-xsmall: 2rem;
+$padding-small: 3rem;
+$padding-regular: 4rem;
+$padding-medium: 6rem;
+$padding-large: 10rem;
+
+$transition-fast: 0.3s ease-out;
+$transition-medium: 0.5s ease-out;
+$transition-medium-m: 0.8s ease-out;
+$transition-long: 1s ease-in-out;
+
+$radius-xsmall: 1rem;
+$radius-medium: 5rem;
+$radius-large: 10rem;
+// $shadow: 3px 0px 5px 0px rgba(0,0,0,0.75);;
+
+$container-width: 1200px;
+
+//Container
+.container {
+	max-width: $container-width;
+	width: 100%;
+	margin: 0 auto;
+
+	@include respond-to("phone") {
+		width: 34.3rem;
+	}
+}
+::selection {
+	background-color: #000;
+	color: #fff;
+}
+
+//HTML,BODY
+// html {
+// 	font-size: 10px;
+// }
+
+body {
+	font-family: $primary-font; //  font-family: "Inter", sans-serif;
+	// background-color: $clr-black;
+}
+
+//None
+.none {
+	display: none;
+}
+
+//line
+.underline {
+	width: 7.6rem;
+	height: 0.1rem;
+	background: $clr-black;
+}

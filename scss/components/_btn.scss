@@ -1,0 +1,17 @@
+@import "../scss-utilts/variable";
+@import "../scss-utilts/mixins";
+
+// .btn {@include btnStyle;}
+
+// $type: $clr-neutral-10;
+// @if $type == $clr-neutral-100 {
+// 	.btn {
+// 		background-color: $clr-neutral-10;
+// 		color: $clr-neutral-100;
+// 	}
+// } @else {
+// 	.btn {
+// 		background-color: $clr-neutral-100;
+// 		color: $clr-neutral-10;
+// 	}
+// }

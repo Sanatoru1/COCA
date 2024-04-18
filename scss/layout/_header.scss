@@ -1,0 +1,71 @@
+@import "../scss-utilts/variable";
+@import "../scss-utilts/mixins";
+
+.header {
+	// padding: 2.4rem 0;
+	padding: 4.5rem 0;
+	margin-bottom: 8.7rem;
+	.header__content {
+		.header-row {
+			@include flex-row;
+			.logo {
+				@include CodeCultLogoStyle(dark);
+			}
+
+			nav {
+				ul {
+					@include flex-row;
+					gap: 3.2rem;
+					li {
+						&:hover {
+							border-bottom: 2px solid $clr-black;
+						}
+						&:last-child {
+							border-bottom: 2px solid $clr-black;
+							margin-left: 6.8rem;
+							padding-bottom: 0.6rem;
+							a {
+								font-weight: 600;
+								line-height: 2.4rem;
+							}
+						}
+						a {
+							@include sec2SsmallTxtStyle;
+							color: $clr-neutral-100;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 1024px) {
+	.header {
+		.header__content {
+			.header-row {
+				nav {
+					background-color: $clr-neutral-100;
+					ul {
+						padding: 1rem;
+						@include flex-column;
+						gap: 3.2rem;
+						li {
+							a {
+								color: $clr-neutral-10;
+							}
+							&:hover {
+								border-color: $clr-neutral-10;
+							}
+							&:last-child {
+								margin-left: inherit;
+								border-color: $clr-neutral-10;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+

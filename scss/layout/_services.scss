@@ -1,0 +1,43 @@
+@import "../scss-utilts/variable";
+@import "../scss-utilts/mixins";
+
+.services {
+	padding: $padding-large 0;
+	.services__content {
+		.services__top {
+			margin-bottom: $margin-xxmedium;
+			h2 {
+				@include secTitleStyle;
+				max-width: 601px;
+			}
+			p {
+				@include subParagrafStyle;
+				max-width: 462px;
+			}
+		}
+		.services__cards {
+            gap: 5.6rem;
+			@include flex-row;
+			flex-wrap: wrap;
+			.services-card {
+				@include flex-row;
+				width: 568px;
+				// height:273px;
+				gap: 6rem;
+				h3 {
+					@include secSubtitleStyle;
+					color: $clr-neutral-100;
+					// max-width: 249px;
+					max-width: 26rem;
+					width: 100%;
+				}
+				p {
+					@include subParagrafStyle;
+					font-size: $font-size-ss;
+					line-height: 26px;
+					max-width: 26rem;
+				}
+			}
+		}
+	}
+}

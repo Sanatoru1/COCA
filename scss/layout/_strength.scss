@@ -1,0 +1,41 @@
+@import "../scss-utilts/variable";
+@import "../scss-utilts/mixins";
+
+.strength{
+    padding: 16rem 0;
+    .strength__content{
+        p{
+            @include subParagrafStyle;
+        }
+        .strength__cards{
+            @include flex-row;
+            gap: 7.2rem;
+            div{
+                h3{
+                    @include sec2XLTxtStyle;
+                    color: $clr-neutral-100;
+                }
+                p{
+                    max-width: 20rem;
+                }
+            }
+        }
+        .strength__img{
+            margin: $margin-xxmedium 0;
+            background-image: url("../../img/images/Strength-image.png");
+            height: 536px;
+            width: 100%;
+        }
+        .strength__txt{
+            @include flex-row;
+            align-items:start;
+            h2{
+                @include secTitleStyle;
+                color: $clr-neutral-100;
+            }
+            p{
+                max-width:39rem;
+            }
+        }
+    }
+}

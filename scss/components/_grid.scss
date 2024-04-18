@@ -1,0 +1,10 @@
+@import "../scss-utilts/variable";
+@import "../scss-utilts/mixins";
+
+.grid{
+    display: grid;
+    // grid: ;
+    grid-template: 
+    'header' ''
+    ;
+}

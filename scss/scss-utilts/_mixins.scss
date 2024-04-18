@@ -1,0 +1,204 @@
+@mixin respond-to($media) {
+	@if $media== "phone" {
+		@media (max-width: 375px) {
+			@content;
+		}
+	}
+}
+
+@mixin click() {
+	position: relative;
+	top: 0.1rem;
+}
+
+@mixin flex-row($justify: space-between, $align: center) {
+	display: flex;
+	justify-content: $justify;
+	align-items: $align;
+}
+
+@mixin flex-row-center() {
+	display: flex;
+	align-items: center;
+}
+
+@mixin flex-column() {
+	display: flex;
+	flex-direction: column;
+}
+
+@mixin flex-column-center() {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+// @mixin flex-wrap () {
+//     display: flex;
+//     flex-wrap: wrap;
+// }
+
+//* CodeCult Logo
+@mixin CodeCultLogoStyle($type) {
+	@include secSubtitleStyle();
+	font-weight: 900;
+	&:hover {
+		text-decoration: underline;
+		cursor: pointer;
+	}
+	@if $type == "dark" {
+		color: $clr-neutral-100;
+		// &:hover{color: darken($clr-neutral-10, 50%);}
+	} @else if $type == "light" {
+		color: $clr-neutral-10;
+		// &:hover{ color: lighten($clr-neutral-100,50%);}
+	}
+}
+
+//* Btns style
+@mixin btnStyle($type) {
+	// padding: 1.6rem 2.5rem;
+	padding: 1.6rem 3.2rem;
+	font-size: $font-size-ss;
+	font-weight: 700; // bold
+	line-height: 2.4rem;
+	border-radius: $radius-large;
+	border: $clr-neutral-100 solid 0.1rem;
+	@if $type == "light" {
+		background-color: $clr-neutral-10;
+		color: $clr-neutral-100;
+	} @else if $type == "dark" {
+		background-color: $clr-neutral-100;
+		color: $clr-neutral-10;
+	}
+}
+
+@mixin btnHvrStyle($type) {
+	&:hover {
+		transition: $transition-medium;
+	}
+	@if $type == "dark" {
+		&:hover {
+			background-color: $clr-neutral-10;
+			color: $clr-neutral-100;
+		}
+	} @else if $type == "light" {
+		&:hover {
+			border-color: $clr-neutral-100;
+			background-color: $clr-neutral-100;
+			color: $clr-neutral-10;
+		}
+	}
+}
+
+//* hovers style
+@mixin darkTxtHvrStyle($type) {
+	// &:hover{
+	//     transition: $transition-fast;
+	//     color: darken($clr-neutral-100 , 35%);
+	// }
+	// @if $type == $clr
+}
+
+// // navs style
+// // @mixin verticalNavStyle{}
+// @mixin horizontNavStyle{@include flex-row()}
+
+//* txts styles
+@mixin titleStyle {
+	font-size: $font-size-4xl;
+	line-height: 9.6rem;
+	font-weight: 700;
+	letter-spacing: -0.3rem;
+}
+
+@mixin sec2XLTxtStyle {
+	font-size: $font-size-2xl;
+	font-weight: 600;
+	line-height: 76.8px;
+}
+
+@mixin secTitleStyle {
+	color: $clr-neutral-100;
+	font-size: $font-size-xl;
+	font-weight: 600;
+	line-height: 67.2px;
+	letter-spacing: -2px;
+}
+
+@mixin secSubtitleStyle {
+	font-size: $font-size-lx;
+	font-weight: 600;
+	line-height: 4.2rem;
+	letter-spacing: -0.1rem;
+}
+
+@mixin secTxtStyle {
+	font-size: $font-size-m;
+	line-height: 26px;
+	font-weight: 700;
+}
+
+@mixin secSsmallTxtStyle {
+	font-size: $font-size-s;
+	line-height: 27px;
+	font-weight: 500;
+}
+
+@mixin sec2SsmallTxtStyle {
+	font-size: $font-size-ss;
+	font-weight: 500;
+	line-height: 26px;
+}
+
+@mixin sec3SsmallTxtStyle {
+	font-size: $font-size-sss;
+}
+
+@mixin subParagrafStyle {
+	@include secSsmallTxtStyle;
+	line-height: 32px;
+	color: $clr-neutral-60;
+}
+
+@mixin H3MediumTxtStyle {
+	font-size: $font-size-x;
+	font-weight: 500;
+	line-height: 52px;
+	letter-spacing: -1px;
+}
+
+@mixin hyphenStyle {
+	margin: $margin-xsmall $margin-ssmall 0 0;
+	width: 76px;
+	height: 1px;
+	background-color: $clr-black;
+}
+
+//* themes
+@mixin ThemeStyle($theme) {
+	@if $theme == "dark" {
+		*{
+			background-color: $clr-neutral-100;
+			color: $clr-neutral-10;
+		}
+	} @else if $theme == "light" {
+		*{
+			background-color: $clr-neutral-10;
+			color: $clr-neutral-100;
+		}
+	}
+}
+
+@mixin txtHvrStyle($type){
+		&:hover{transition:  $transition-fast;}
+		@if $type == 'darkTxt' {
+			&:hover{
+				color: lighten($clr-neutral-100, 50%);
+			}
+		} @else if $type == 'lightTxt' {
+			&:hover{
+				color: darken($clr-neutral-10, 50%);
+			}
+		}
+}
