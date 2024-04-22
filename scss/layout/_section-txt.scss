@@ -1,17 +1,17 @@
 @import "../scss-utilts/variable";
 @import "../scss-utilts/mixins";
 
-.hero {
+.page-section {
 	padding-bottom: 13.5rem;
-	.hero__content {
-		.hero__left {
+	.page-section__content {
+		.page-section__left {
 			h1 {
 				@include titleStyle;
 				max-width: 60rem;
 			}
-			.hero-left__bottom {
+			.page-section-left__bottom {
 				margin-top: 5rem;
-				.hero_txt {
+				.page-section_txt {
 					display: flex;
 					.underline {
 						@include hyphenStyle;
@@ -46,6 +46,32 @@
 				}
 			}
 		}
-		// .hero__right{}
+		// .page-section__right{}
 	}
 }
+
+// .page-secton {
+// 	margin: 11.2rem 0;
+// 	@include flex-row;
+// 	.page-secton__left {
+// 		max-width: 72rem;
+// 		width: 100%;
+// 		h2 {
+// 			@include secTitleStyle;
+// 		}
+// 		.page-secton_txt{
+// 			display: flex;
+// 			.underline{@include hyphenStyle;}
+// 			p {
+// 				max-width: 543px;
+// 				width: 100%;
+// 				font-size: $font-size-l;
+// 				font-weight: 600;
+// 				line-height: 34px;
+// 			}
+// 		}
+// 	}
+// 	.section-txt__right{
+// 		a{@include btnStyle(dark); @include btnHvrStyle(dark);}
+// 	}
+// }

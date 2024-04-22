@@ -9,31 +9,6 @@
 		@include click;
 	}
 	.footer__content {
-		.footer__top {
-			margin: 11.2rem 0;
-			@include flex-row;
-			.footer-top__left {
-				max-width: 72rem;
-				width: 100%;
-				h2 {
-					@include secTitleStyle;
-				}
-				.footer-top_txt{
-					display: flex;
-					.underline{@include hyphenStyle;}
-					p {
-						max-width: 543px;
-						width: 100%;
-						font-size: $font-size-l;
-						font-weight: 600;
-						line-height: 34px;
-					}
-				}
-			}
-			.footer-top__right{
-				a{@include btnStyle(dark); @include btnHvrStyle(dark);}
-			}
-		}
 		.footer__midle {
 			padding: 7rem 0;
 			border-bottom: 1px solid $clr-neutral-40;
